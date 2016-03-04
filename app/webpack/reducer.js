@@ -5,8 +5,7 @@ const defaultState = {
 };
 
 module.exports = handleActions({
-  TEST: (state, action) => {
-    console.log(state);
+  REFRESH_ONGOING_MATCH: (state, action) => {
     return state;
   }
 }, defaultState);
