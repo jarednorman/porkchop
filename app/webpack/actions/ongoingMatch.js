@@ -6,7 +6,8 @@ const updateOngoingMatch = createAction('ONGOING_MATCH_UPDATE');
 
 const refresh = () => {
   return (dispatch, getState) => {
-    const { ongoingMatch: { fetching } } = getState();
+    const { ongoingMatch: state } = getState();
+    const fetching = state.get('fetching');
 
     if (fetching) { return; }
 
