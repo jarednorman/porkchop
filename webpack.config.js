@@ -14,10 +14,11 @@ config.entry = {
 config.output = {
   path: path.join(__dirname, "app/assets/javascripts/entries"),
   filename: "[name].js"
-}
+};
 
 config.plugins = [
   new webpack.ProvidePlugin({
+    'Promise': 'es6-promise',
     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
   })
 ];
